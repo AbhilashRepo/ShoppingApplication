@@ -15,6 +15,13 @@
 
 	<dependencies>
 
+		<!-- Linking Backed Project -->
+		<dependency>
+			<groupId>com.abhi</groupId>
+			<artifactId>backEndShoppingApp</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
 		<!-- JAVA EE API -->
 		<dependency>
 			<groupId>javax</groupId>
@@ -30,7 +37,7 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<!-- JSTL -->
 		<dependency>
 			<groupId>jstl</groupId>
