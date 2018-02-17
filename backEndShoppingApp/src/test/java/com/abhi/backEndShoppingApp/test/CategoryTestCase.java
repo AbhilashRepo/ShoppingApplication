@@ -33,14 +33,14 @@ public class CategoryTestCase {
 		category.setDescription("This is disciption about Rocket");
 		category.setImageURL("CAT_3.png");
 
-		assertEquals("Successfully added a category inside the table", true, categoryDAO.add(category));
+		assertEquals("NOT Successfully added a category inside the table", true, categoryDAO.add(category));
 	}
 	
 	/*@Test
 	public void testGetCategory(){
 		category = categoryDAO.get(2);
 		
-		assertEquals("Successfully fetched a single category from the table.!","bikes",category.getName());
+		assertEquals("NOT Successfully fetched a single category from the table.!","bikes",category.getName());
 		
 	}*/
 	
@@ -49,7 +49,7 @@ public class CategoryTestCase {
 		category = categoryDAO.get(2);
 		category.setName("new Bike");
 		
-		assertEquals("Successfully updated a single category in the table.!",true,categoryDAO.update(category));
+		assertEquals("NOT Successfully updated a single category in the table.!",true,categoryDAO.update(category));
 		
 	}*/
 	
@@ -57,14 +57,14 @@ public class CategoryTestCase {
 	public void testDeleteCategory(){
 		category = categoryDAO.get(2);
 				
-		assertEquals("Successfully disabled a single category in the table.!",true,categoryDAO.delete(category));
+		assertEquals("NOT Successfully disabled a single category in the table.!",true,categoryDAO.delete(category));
 		
 	}*/
 	
 /*	@Test
 	public void testListCategory(){
 						
-		assertEquals("Successfully fetched the list of categories from table.!",1,categoryDAO.list().size());
+		assertEquals("NOT Successfully fetched the list of categories from table.!",1,categoryDAO.list().size());
 		
 	}*/
 	

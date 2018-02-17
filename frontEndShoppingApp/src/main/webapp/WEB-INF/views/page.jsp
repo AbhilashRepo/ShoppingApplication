@@ -17,15 +17,17 @@
 <head>
 
 <meta charset="utf-8">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
 
 <title>Shopping Application - ${title}</title>
 
 <script>
-	window.menu = '${title}';
+	window.menu ='${title}';
+	
+	window.contextRoot ='${contextRoot}';
 </script>
 
 
@@ -34,6 +36,10 @@
 
 <!-- Bootstrap Readable theme -->
 <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+
+<!-- Bootstrap DataTable -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
+
 
 <!-- Custom styles for this template -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -69,16 +75,29 @@
 				<%@include file="listProducts.jsp"%>
 			</c:if>
 			
+			<!-- Loading the single product page content -->
+			<c:if test="${userClickShowProduct == true}">
+				<%@include file="singleProduct.jsp"%>
+			</c:if>
 
 		</div>
 
 		<!-- Footer -->
 		<%@include file="./shared/footer.jsp"%>
 
-		<!-- Bootstrap core JavaScript -->
+		<!-- JQuery -->
 		<script src="${js}/jquery.js"></script>
-		<script src="${js}/bootstrap.bundle.min.js"></script>
-
+		
+		<!-- Bootstrap core JavaScript -->
+		<script src="${js}/bootstrap.min.js"></script>
+		
+		<!-- DataTable Plugin -->
+		<script src="${js}/jquery.dataTables.js"></script>
+		
+		<!-- DataTable Bootstrap script -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
+		
+		
 		<!-- self coded javascript -->
 		<script src="${js}/myapp.js"></script>
 
