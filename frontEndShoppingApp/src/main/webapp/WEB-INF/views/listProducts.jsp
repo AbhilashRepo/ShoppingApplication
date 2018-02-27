@@ -47,6 +47,7 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<table id="productListTable" class="table table-striped table-borderd">
+					
 					<thead>
 						<tr>
 							<th></th>
@@ -68,8 +69,8 @@
 							<th></th>
 						</tr>
 					
-					</tfoot>
-				
+					</tfoot> 
+			
 				</table>
 			
 			</div>
