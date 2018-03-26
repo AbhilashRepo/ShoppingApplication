@@ -5,17 +5,17 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="
    http://www.springframework.org/schema/beans
-   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/beans/spring-beans.xsd
    http://www.springframework.org/schema/context
-   http://www.springframework.org/schema/context/spring-context-3.0.xsd
+   http://www.springframework.org/schema/context/spring-context.xsd
    http://www.springframework.org/schema/mvc
-   http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+   http://www.springframework.org/schema/mvc/spring-mvc.xsd
    http://www.springframework.org/schema/webflow-config
    http://www.springframework.org/schema/webflow-config/spring-webflow-config.xsd
      
    ">
 	<context:component-scan base-package="com.abhi.frontEndShoppingApp"></context:component-scan>
-	<context:component-scan base-package="com.abhi.backEndShoppingApp"></context:component-scan>
+	
 
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -43,7 +43,8 @@
 	<wf:flow-location-pattern value="/**/*-flow.xml" />
 	</wf:flow-registry>
 	
-	<wf:flow-builder-services id="flowBuilderServices" view-factory-creator="viewFactoryCreator"
+	<wf:flow-builder-services id="flowBuilderServices" 
+	view-factory-creator="viewFactoryCreator"
 	validator="validator"
 	/>
 
